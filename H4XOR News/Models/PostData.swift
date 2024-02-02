@@ -15,10 +15,10 @@ struct Results: Decodable {
 //need identifiable protocol in order to use that structure (post in Text(post.title) inside the list, and for the to know how to order each item.
 struct Post: Decodable, Identifiable {
     var id: String {
-        return objectId
+        return objectID
     }
-    let objectId: String
+    let objectID: String
     let points: Int
     let title: String
-    let url: String
+    let url: String?
 }
