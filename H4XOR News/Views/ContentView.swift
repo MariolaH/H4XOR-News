@@ -14,8 +14,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
+                // NavigationLink - is going to create a button on the right-hand side of each cell and its going to trigger a presentation to the DetailView when its pressed
                 NavigationLink(destination: DetailView(url: post.url)) {
                     HStack {
+                        //Label - this is what each individual cell will show
                         Text(String(post.points))
                         Text(post.title)
                     }
